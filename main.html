@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns = "http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="keywords" content="ground, sales, source,">
+<meta name="description" content="FTRACK Tracing Application - PKG621RI">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>FTRACK Tracing Application - PKG621RI</title>
+<script type="text/javascript">
+
+function validate()
+{
+if (document.form1.iitraks.value == "")
+{
+alert("Please enter tracking number(s).");
+document.form1.iitraks.focus();
+return false;
+}
+document.form1.reset.focus();
+return true;
+}
+
+function validate2()
+{  var emailcheck = document.form1.iiemla.value;
+if (document.form1.iiemla.value == "")
+{    alert("Please enter a FEDEX email address.");
+document.form1.iiemla.focus();
+return false;
+}
+if (emailcheck.indexOf("@") > -1)
+{
+alert("Please do not enter a domain in the email address -  @fedex.com addresses only.");
+document.form1.iiemla.focus();
+return false;
+}
+return true;
+}
+</SCRIPT>
+</head>
+<BODY background="/webimages1/finespk.GIF" onload="document.form1.iitraks.focus();">
+
+<img src="/webimages1/logogrnd.gif" height=45 width=165>
+<br>
+<img SRC="/webimages1/ground-masthead_soft.jpg">
+<br>
+
+<form name="form1" METHOD="POST" action="/cgi-bin/PKG621CL?IIWEBI=" onSubmit="return validate();">
+
+<table width="600" border="0" cellspacing="0" cellpadding="0">
+<tr bgcolor="#660099"><td height="15" align="center" colspan="2"><font color="#FFFFFF" size="4">FTRACK Tracing</td></tr>
+<tr><td bgcolor="#E6E6E6" colspan="2" valign="top">
+
+<table border="0" cellpadding="5" cellspacing="0">
+<tr><td><font face="Arial" size="2">
+Track up to 25 FedEx Ground tracking numbers, barcodes, or door tags (one per line)<br><br>
+</font></td></tr>
+</table>
+
+</td></tr>
+<tr><td bgcolor="#E6E6E6" valign="top" width="50%">
+<table cellspacing="0" cellpadding="5" border="0">
+<tr><td bgcolor="#999999" colspan="2"><font color="#FFFFFF" face="Arial" size="2">Enter&nbsp;Tracking&nbsp;numbers</td>
+</tr>
+<tr><td valign="middle" bgcolor="#CCCCCC" colspan="2">
+<textarea cols="34" name="iitraks" rows="4" wrap="hard"></textarea>
+</td></tr>
+<tr><td bgcolor="#CCCCCC" align="left">
+<input type="reset" value="Reset" name="reset">
+
+</td>
+<td bgcolor="#CCCCCC" align="right">
+<input type="submit" value="Track" name="submit">
+</td></tr>
+</table>
+</td>
+<td bgcolor="#E6E6E6" valign="top" align="left">
+<table cellspacing="0" cellpadding="5" border="0">
+<tr><td colspan="2">&nbsp;</td>
+</tr>
+<tr><td valign="top" colspan="2"><font color="#660099" size="-1">
+For an FTRACK report please enter a Fedex email address below and click Submit</td></tr>
+<tr><td align="left" colspan="2"><input type="text" name="iiemla" size="25" value="">@fedex.com</td></tr>
+<tr><td align="left" width="60%"><font color="#660099" size="-1">
+<br>TMS Data<input type="radio" value="Y" name="iitmsd">Yes<input type="radio" value="N" name="iitmsd" checked>No
+</td>
+<td align="right">
+<input type="submit" value="Submit" name="submit" onClick="return validate2();">
+</td></tr>
+</table>
+
+</td>
+</tr>
+<tr bgcolor="#E6E6E6"><td height="25" colspan="2">&nbsp;</td></tr>
+</table>
+<br>
+<font face="Arial" size="2">Data Available for tracking id's picked up on or after</font>&nbsp;<font color="red">6/16/24</font>.
+<br>
+<br><font face="Arial" size="2">If entering 20 digit number and no data displayed, try to prepend the number with 92 for SmartPost packages.</font>
+<input type="hidden" name="IIFORM" value="01">                                                                                                                                                                                                                                                              
+<BR><BR>                                          &nbsp;&nbsp<b><i><font size=+1>                   <IMG src="/WEBIMAGES1/green_new.gif">&nbsp;&nbsp   <a target="window" href="/webpages1/FTRACKchanges.html"><font size=+2 color="#660099">Click</font></a> to view a description of recent changes to FTRACK.</font></b></i><input type="hidden" name="IICNT1" value="N">                                                                                                                                                                                                                                                               
+</form>
+<br>
+<br><br>
+<font color="#959595"><i>413,281,200 Packages have been successfully Tracked since 6/03/2022</i></font>
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Form</title>
+</head>
+<body>
+    <form name="form1" method="POST" action="/cgi-bin/PKG621CL?IIWEBI=" onsubmit="return validate();">
+        <label for="iitraks">Tracking Numbers:</label>
+        <textarea name="iitraks" id="iitraks" rows="10" cols="30" required></textarea>
+        <br>
+        <label for="iiemla">Email Address:</label>
+        <input type="email" name="iiemla" id="iiemla" size="20" required>
+        <br>
+        <label>TMS Data:</label>
+        <input type="radio" name="iitmsd" value="Y" required> Yes
+        <input type="radio" name="iitmsd" value="N"> No
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            // Add your validation logic here
+            return true;
+        }
+    </script>
+</body>
+</html>
